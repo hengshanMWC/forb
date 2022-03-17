@@ -15,7 +15,7 @@ Get the directory path of `packages` and `packages.json` path
 ```
 
 ```js
-const { getPackagesDir } = require("@mwc/forb");
+const { getPackagesDir } = require("@abmao/forb");
 /**
  * Get package directory path
  * @params [string='packages/*'] packages path(glob string
@@ -29,5 +29,5 @@ const { dirs, filesPath } = await getPackagesDir("packages/*");
 # Install
 
 ```
-npm i @mwc/forb
+npm i @abmao/forb
 ```
