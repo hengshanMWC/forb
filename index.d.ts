@@ -2,5 +2,4 @@ export type packagesDir = {
   dirs: string[],
   filesPath: string[]
 }
-export type getPackagesDir = 
-  (packagesPath: string = 'packages/*') => Promise<packagesDir>
+export declare function getPackagesDir (packagesPath: string = 'packages/*'): Promise<packagesDir>
