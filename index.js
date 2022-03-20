@@ -1,6 +1,6 @@
-const glob = require('glob')
-const { join } = require('path')
-exports.getPackagesDir = function getPackagesDir(packagesPath = 'packages/*') {
+import glob from 'glob'
+import { join } from 'path'
+export function getPackagesDir(packagesPath = 'packages/*') {
   return new Promise((resolve, reject) => {
     glob(packagesPath, {}, function (err, matches) {
       if (err) {
