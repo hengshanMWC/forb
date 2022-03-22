@@ -1,4 +1,4 @@
-import { glob } from 'glob'
+import glob from 'glob'
 import { join } from 'path'
 export function getPackagesDir(packagesPath = 'packages/*') {
   return new Promise((resolve, reject) => {
