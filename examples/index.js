@@ -7,6 +7,6 @@ getPackagesDir()
       'packages/b/package.json',
       'packages/cc/package.json'
     ]
-    console.log(dirs.every((item, index) => item === _dirs[index]))
-    console.log(filesPath.every((item, index) => item === _filesPath[index]))
+    console.log(dirs, _dirs.every((item, index) => item === dirs[index]))
+    console.log(filesPath, _filesPath.every((item, index) => item === filesPath[index]))
   })
