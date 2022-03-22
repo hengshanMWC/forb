@@ -1,6 +1,6 @@
 {
   "name": "@abmao/forb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the directory path of `packages` and `packages.json` path",
   "main": "index.js",
   "type": "module",
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/hengshanMWC/forb#readme",
   "dependencies": {
-    "glob": "^7.2.0"
+    "globby": "^13.1.1"
   }
 }
