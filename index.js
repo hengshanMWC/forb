@@ -1,14 +1,8 @@
-import glob from '@abmao/glob'
-import { join } from 'path'
-export function getPackagesDir(packagesPath = 'packages/*') {
-  return new Promise((resolve, reject) => {
-    glob(packagesPath, {}, function (err, matches) {
-      if (err) {
-        reject(err)
-      } else {
-        const filesPath = matches.map((dir) => join(dir, 'package.json'))
-        resolve({dirs: matches, filesPath})
-      }
-    })
-  })
+import { globby } from 'globby'
+export async function getPackagesDir(packagesPath) {
+  const values = await globby(packagesPath)
+  const regExp = new RegExp('\/package\\.json$')
+  const filesPath = values.filter(item => regExp.test(item))
+  const dirs = filesPath.map(item => item.replace(regExp, ''))
+  return { dirs, filesPath }
 }

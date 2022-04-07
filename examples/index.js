@@ -1,5 +1,5 @@
 import { getPackagesDir } from '../index.js'
-getPackagesDir()
+getPackagesDir([ 'packages/**' ])
   .then(({ dirs, filesPath}) => {
     const _dirs = [ 'packages/a', 'packages/b', 'packages/cc' ]
     const _filesPath = [

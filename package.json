@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/hengshanMWC/forb#readme",
   "dependencies": {
-    "@abmao/glob": "^0.0.1"
+    "globby": "^13.1.1"
   }
 }
