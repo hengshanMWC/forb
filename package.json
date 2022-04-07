@@ -1,6 +1,6 @@
 {
   "name": "@abmao/forb",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Get the directory path of `packages` and `packages.json` path",
   "main": "index.js",
   "type": "module",
