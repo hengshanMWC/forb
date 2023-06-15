@@ -25,7 +25,10 @@
     "url": "https://github.com/hengshanMWC/forb/issues"
   },
   "homepage": "https://github.com/hengshanMWC/forb#readme",
-  "dependencies": {
-    "globby": "^13.1.1"
+  "devDependencies": {
+    "globby": "^13.1.4"
+  },
+  "peerDependencies": {
+    "globby": "^13.1.4"
   }
 }
