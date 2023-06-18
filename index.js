@@ -7,9 +7,9 @@ const DEFAULT_IGNORE = [
 ]
 export async function getPackagesDir(packagesPath, ignoreFiles = DEFAULT_IGNORE) {
   const packageJsonPath = Array.isArray(packagesPath) ? normalizePatterns(packagesPath) : normalizePatterns([packagesPath])
-  const values = await globby(packageJsonPath, {
+  const values = sortFilesName(await globby(packageJsonPath, {
     ignoreFiles
-  })
+  }))
   const regExp = new RegExp('\/package\\.json$')
   const filesPath = values.filter(item => regExp.test(item))
   const dirs = filesPath.map(item => item.replace(regExp, ''))
@@ -32,4 +32,8 @@ function normalizePatterns (patterns) {
     )
   }
   return normalizedPatterns
+}
+
+function sortFilesName (files) {
+  return files.slice().sort((a, b) => a.localeCompare(b))
 }
