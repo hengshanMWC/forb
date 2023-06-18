@@ -1,14 +1,16 @@
 {
   "name": "@abmao/forb",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Get the directory path of `packages` and `packages.json` path",
-  "main": "index.js",
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "files": [
-    "index.js",
+    "dist",
     "index.d.ts"
   ],
   "scripts": {
+    "build": "tsup index.js --format esm,cjs --target node12.20.0",
     "test": "cd ./examples && node index.js"
   },
   "repository": {
@@ -25,10 +27,10 @@
     "url": "https://github.com/hengshanMWC/forb/issues"
   },
   "homepage": "https://github.com/hengshanMWC/forb#readme",
-  "devDependencies": {
+  "dependencies": {
     "globby": "^13.1.4"
   },
-  "peerDependencies": {
-    "globby": "^13.1.4"
+  "devDependencies": {
+    "tsup": "^7.0.0"
   }
 }
