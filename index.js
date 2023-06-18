@@ -1,14 +1,14 @@
-import { globby } from 'globby'
+import { glob } from 'glob'
 const DEFAULT_IGNORE = [
   '**/node_modules/**',
   '**/bower_components/**',
   '**/test/**',
   '**/tests/**',
 ]
-export async function getPackagesDir(packagesPath, ignoreFiles = DEFAULT_IGNORE) {
+export async function getPackagesDir(packagesPath, ignore = DEFAULT_IGNORE) {
   const packageJsonPath = Array.isArray(packagesPath) ? normalizePatterns(packagesPath) : normalizePatterns([packagesPath])
-  const values = sortFilesName(await globby(packageJsonPath, {
-    ignoreFiles
+  const values = sortFilesName(await glob(packageJsonPath, {
+    ignore
   }))
   const regExp = new RegExp('\/package\\.json$')
   const filesPath = values.filter(item => regExp.test(item))

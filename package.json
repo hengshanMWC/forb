@@ -2,11 +2,12 @@
   "name": "@abmao/forb",
   "version": "2.0.4",
   "description": "Get the directory path of `packages` and `packages.json` path",
-  "main": "./dist/index.mjs",
+  "type": "module",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "default": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
     }
   },
   "files": [
@@ -32,7 +33,7 @@
   },
   "homepage": "https://github.com/hengshanMWC/forb#readme",
   "dependencies": {
-    "globby": "^13.1.4"
+    "glob": "^10.2.7"
   },
   "devDependencies": {
     "tsup": "^7.0.0"
