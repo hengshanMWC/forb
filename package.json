@@ -2,11 +2,11 @@
   "name": "@abmao/forb",
   "version": "2.0.4",
   "description": "Get the directory path of `packages` and `packages.json` path",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "default": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
     }
   },
   "files": [
