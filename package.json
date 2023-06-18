@@ -4,7 +4,7 @@
   "description": "Get the directory path of `packages` and `packages.json` path",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "module": "dist/index.cjs",
   "files": [
     "dist",
     "index.d.ts"
